@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output | Movie Recommendation System</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <br><h1>Movie Recommendation System</h1><br>
+        <big>You are recommended the following movies:<br><br>
+            {% for movie in data %}
+                {{movie}}<br>
+            {% endfor %}
+        </big><br><br>
+
+
+        <a class="btn btn-primary" href="home">Done</a>
+    </div>
+</body>
+</html>

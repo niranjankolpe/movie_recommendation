@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Movie Recommendation System</title>
+</head>
+<body>
+    <div class="container" style="text-align: center;">
+        <br><h1>Movie Recommendation System</h1><br>
+        <big>Welcome to Movie Recommendation System</big><br><br>
+
+        <a class="btn btn-primary" href="train_model">Refresh the Models</a><br><br>
+
+        <form action="recommend" method="post">
+            {% csrf_token %}
+            <label for="movie_input">Enter a movie name: </label>
+            <input type="text" name="movie_input" required><br><br>
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
