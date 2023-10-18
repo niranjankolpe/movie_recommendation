@@ -1,6 +1,5 @@
 # movie_recommendation
-A Content-based Movie Recommendation System utilizing Machine Learning algorithms and Django framework to recommend movies based on user activity and interactions.
-
+A Content-based Movie Recommendation System to recommend movies based on user input.
 Software Requirements:
 1) Python (version 3.11.4)
 2) Django (version 4.2.3)

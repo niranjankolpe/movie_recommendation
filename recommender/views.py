@@ -25,6 +25,9 @@ def train_model(request):
 
     movies.to_csv("static/movies_cleaned.csv")
 
+    save_names = movies[["original_title", "tagline"]].copy(deep=True)
+    save_names.to_html("templates/movies_titles.html")
+
     tfv = TfidfVectorizer(min_df=3, max_features=None, strip_accents="unicode",
                         analyzer="word", token_pattern="\w{1,}",
                         ngram_range=(1, 3), stop_words="english")
@@ -37,6 +40,12 @@ def train_model(request):
         joblib.dump(sig, file)
     
     return redirect("home")
+
+def movies(request):
+    return render(request, "movies.html")
+
+def movies_titles(request):
+    return  render(request, "movies_titles.html")
 
 def recommend(request):
     # Getting the movie input
